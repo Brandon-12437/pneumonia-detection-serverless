@@ -53,8 +53,6 @@ While the model achieves high sensitivity, there are specific areas for improvem
 
     The Issue: The model has a lower recall for the "Normal" class (54%) compared to "Pneumonia" (97%).
 
-    The Impact: This means many healthy patients may be flagged as having pneumonia, requiring further review by a human doctor.
-
     Why it happens: The training dataset is imbalanced, with significantly more pneumonia images than normal ones. Even with class weights, the model became "aggressive" in detecting pneumonia to avoid missing sick patients.
 
 2. Generalization & "Black Box" Nature
@@ -121,8 +119,7 @@ The dataset consists of 5,586 Chest X-Ray images categorized as Normal or Pneumo
 The dataset used for this project is the "Chest X-Ray Images (Pneumonia)" dataset, originally hosted on Kaggle. It comprises 5,856 validated Chest X-Ray images (JPEG) from pediatric patients aged one to five years from Guangzhou Women and Children’s Medical Center.
 
 ### 🛠 How to add the Link
-
-Grader's love to see direct links. You can add this line: Dataset Link: [Kaggle - Chest X-Ray Images (Pneumonia)]
+ Dataset Link: [Kaggle - Chest X-Ray Images (Pneumonia)]
                                 
                                (https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 
