@@ -94,8 +94,6 @@ While the model achieves high sensitivity, there are specific areas for improvem
    
                                                    python test.py
 
-Train your own: Open pneumonia-classifier-ipynb.ipynb and follow the steps to re-train the model from the Kaggle dataset.
-
   <img width="851" height="664" alt="Screenshot from 2026-01-07 17-34-55" src="https://github.com/user-attachments/assets/0ab59d49-24e8-4507-a003-a4f93f92232f" />
 
 ### PROBLEM DESCRIPTION
