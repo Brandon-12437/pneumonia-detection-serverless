@@ -102,7 +102,7 @@ The Challenge: Interpreting Chest X-Rays (CXR) requires high expertise. In over-
 
 The Solution: This project provides an automated triage tool using a Deep Learning model (Xception). It analyzes digital X-rays and returns a classification in seconds via a serverless AWS Lambda API, allowing for rapid screening and second opinions in rural or high-traffic clinics.
 
-# EXPLORATORY DATA ANALYSIS (EDA)
+## EXPLORATORY DATA ANALYSIS (EDA)
 
 The dataset consists of 5,586 Chest X-Ray images categorized as Normal or Pneumonia.
 
@@ -137,7 +137,7 @@ The model logic is contained in pneumonia-classifier-ipynb.ipynb.
 
 The application is containerized using Docker to ensure a consistent environment between local development and AWS Lambda.
 
-#### To run locally:
+## To run locally:
 
   Build the image:
     
