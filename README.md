@@ -1,5 +1,7 @@
- # PNEUMONIA DETECTION: SERVERLESS DEEP LEARNING API
- ###3🛠 Tech Stack
+ <img width="851" height="664" alt="Screenshot from 2026-01-07 17-34-55" src="https://github.com/user-attachments/assets/0ab59d49-24e8-4507-a003-a4f93f92232f" />
+ 
+ ### PNEUMONIA DETECTION: SERVERLESS DEEP LEARNING API
+ ## Tech Stack
 
    Deep Learning: Python, TensorFlow/Keras, ONNX
 
@@ -13,7 +15,7 @@
 
 
 
-### 🛠 Environment & Data Source
+## Environment & Data Source
 
 ### Data Source
 The dataset used for this project is the **Chest X-Ray Images (Pneumonia)** dataset, originally hosted on **Kaggle**. 
@@ -26,11 +28,11 @@ The model was developed and trained in a **Kaggle Notebook** environment:
 - **Runtime:** Python 3 (TensorFlow/Keras)
 - **Workflow:** Data was pulled directly from Kaggle's input directories, preprocessed, and the final model was exported as both `.h5` and `.onnx` for deployment.
 
-### 📊 Detailed Model Evaluation
+## Detailed Model Evaluation
 
 The model was evaluated using a held-out test set of 624 clinical images.
 
-### Performance Summary
+## Performance Summary
 - **Recall (Sensitivity):** 0.97 (Prioritized to ensure patient safety)
 - **Overall Accuracy:** 0.81
 - **F1-Score (Pneumonia):** 0.86
@@ -41,7 +43,7 @@ The model was evaluated using a held-out test set of 624 clinical images.
 | **Actual NORMAL** | 126 | 108 |
 | **Actual PNEUMONIA** | 12 | **378** |
 
-### Engineering Efficiency (ONNX)
+## Engineering Efficiency (ONNX)
 By converting the model to **ONNX**, I optimized the production environment:
 - **Model Size:** Reduced to ~80MB for faster Lambda deployments.
 - **Latency:** Inference time reduced significantly compared to standard Keras, enabling near-instant predictions through the AWS Lambda Function URL.
@@ -61,7 +63,7 @@ While the model achieves high sensitivity, there are specific areas for improvem
 
     Interpretability: Currently, the model provides a prediction but does not highlight where in the lungs it sees the infection.
 
-### 🚀 Planned Improvements
+## Planned Improvements
 
    Implement Grad-CAM: Add heatmaps to the API response so clinicians can see the specific lung regions the model is focusing on.
 
@@ -69,9 +71,7 @@ While the model achieves high sensitivity, there are specific areas for improvem
 
    Data Diversity: Incorporate a wider variety of datasets (like the NIH Chest X-ray dataset) to improve the model's ability to generalize across different age groups.
 
-
-
-### 🧠 Design Decisions
+## Design Decisions
 
    Why Xception? I chose Xception for its depthwise separable convolutions, which offer a great balance between accuracy and parameter efficiency—perfect for a serverless environment with memory constraints.
 
@@ -80,7 +80,7 @@ While the model achieves high sensitivity, there are specific areas for improvem
    Why Serverless? Pneumonia screening doesn't require 24/7 uptime in most clinics. Serverless deployment allows for a "pay-per-test" model that is much more cost-effective for small medical centers.
 
 
-  ### 🚀 How to Reproduce
+  ## How to Reproduce
 
    Clone the repo: 
                     
@@ -88,13 +88,13 @@ While the model achieves high sensitivity, there are specific areas for improvem
 
    Install Dependencies: 
                      
-                     pip install -r requirements.txt
+                    pip install -r requirements.txt
 
    Run Inference Locally:
    
-                                                   python test.py
+                                                  python test.py
 
-  <img width="851" height="664" alt="Screenshot from 2026-01-07 17-34-55" src="https://github.com/user-attachments/assets/0ab59d49-24e8-4507-a003-a4f93f92232f" />
+ 
 
 ### PROBLEM DESCRIPTION
 Pneumonia is a life-threatening lung infection that causes the alveoli to fill with fluid. It is a leading cause of death globally, especially where access to specialist radiologists is limited.
@@ -103,7 +103,7 @@ The Challenge: Interpreting Chest X-Rays (CXR) requires high expertise. In over-
 
 The Solution: This project provides an automated triage tool using a Deep Learning model (Xception). It analyzes digital X-rays and returns a classification in seconds via a serverless AWS Lambda API, allowing for rapid screening and second opinions in rural or high-traffic clinics.
 
-###  EXPLORATORY DATA ANALYSIS (EDA)
+# EXPLORATORY DATA ANALYSIS (EDA)
 
 The dataset consists of 5,586 Chest X-Ray images categorized as Normal or Pneumonia.
 
@@ -113,18 +113,18 @@ The dataset consists of 5,586 Chest X-Ray images categorized as Normal or Pneumo
 
 
 
-### Data Source:
+## Data Source:
 The dataset used for this project is the "Chest X-Ray Images (Pneumonia)" dataset, originally hosted on Kaggle. It comprises 5,856 validated Chest X-Ray images (JPEG) from pediatric patients aged one to five years from Guangzhou Women and Children’s Medical Center.
 
-### 🛠 How to add the Link
+##  How to add the Link
  Dataset Link: [Kaggle - Chest X-Ray Images (Pneumonia)]
                                 
                                (https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 
-### DATA VISUALIZATION
+##  DATA VISUALIZATION
  <img width="700" height="559" alt="Screenshot from 2026-01-07 17-47-32" src="https://github.com/user-attachments/assets/80473445-40d5-4b67-942b-5e236ceafa2a" />
  
-### . MODEL TRAINING & REPRODUCIBILITY
+##. MODEL TRAINING & REPRODUCIBILITY
 
 The model logic is contained in pneumonia-classifier-ipynb.ipynb.
 
@@ -156,10 +156,10 @@ The application is containerized using Docker to ensure a consistent environment
  <img width="1920" height="1048" alt="Screenshot from 2026-01-07 15-25-56" src="https://github.com/user-attachments/assets/85de6be7-4635-4845-84f0-5f1f77a6d12a" />
 
 
-###  CLOUD DEPLOYMENT
+##  CLOUD DEPLOYMENT
 
 The model is deployed as a Docker container on AWS Lambda, triggered by an API Gateway. This serverless approach allows the API to scale automatically and only cost money when a request is made.
-functio url
+function url
                  https://zi74stw4tyvlcusok3mzkonsve0cblid.lambda-url.us-east-1.on.aws/
 
  Test Success: 
@@ -169,7 +169,7 @@ functio url
  <img width="1912" height="1068" alt="Screenshot from 2026-01-07 16-09-19" src="https://github.com/user-attachments/assets/1ccc01d7-a303-4a24-b939-9f2a72beaa1c" />
 
 
-###  PROJECT STRUCTURE
+# PROJECT STRUCTURE
 
                            .
                      ├── screenshots/               # Project images and proof of work
