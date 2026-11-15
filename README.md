@@ -48,7 +48,7 @@ By converting the model to **ONNX**, I optimized the production environment:
 - **Model Size:** Reduced to ~80MB for faster Lambda deployments.
 - **Latency:** Inference time reduced significantly compared to standard Keras, enabling near-instant predictions through the AWS Lambda Function URL.
 
-### ⚠️ Model Limitations & Future Work
+## Model Limitations & Future Work
 
 While the model achieves high sensitivity, there are specific areas for improvement identified during evaluation:
 1. High False Positive Rate
@@ -92,8 +92,7 @@ While the model achieves high sensitivity, there are specific areas for improvem
 
    Run Inference Locally:
    
-                                                  python test.py
-
+                    python test.py
  
 
 ### PROBLEM DESCRIPTION
@@ -142,21 +141,21 @@ The application is containerized using Docker to ensure a consistent environment
 
   Build the image:
     
-                                                    docker build -t pneumonia-model .
+                                     docker build -t pneumonia-model .
                                                     
-#### Run the container: 
+## Run the container: 
     
-                                                   docker run -it --rm -p 9000:8080 pneumonia-model
+                                      docker run -it --rm -p 9000:8080 pneumonia-model
 <img width="1912" height="1068" alt="Screenshot from 2026-01-07 15-26-30" src="https://github.com/user-attachments/assets/3be83941-3be4-429b-8088-94229afa64d4" />
 
  Test with: 
     
-                                           python test.py (ensure the URL in test.py is set to localhost).
+                                       python test.py (ensure the URL in test.py is set to localhost).
 
  <img width="1920" height="1048" alt="Screenshot from 2026-01-07 15-25-56" src="https://github.com/user-attachments/assets/85de6be7-4635-4845-84f0-5f1f77a6d12a" />
 
 
-##  CLOUD DEPLOYMENT
+## CLOUD DEPLOYMENT
 
 The model is deployed as a Docker container on AWS Lambda, triggered by an API Gateway. This serverless approach allows the API to scale automatically and only cost money when a request is made.
 function url
@@ -169,7 +168,7 @@ function url
  <img width="1912" height="1068" alt="Screenshot from 2026-01-07 16-09-19" src="https://github.com/user-attachments/assets/1ccc01d7-a303-4a24-b939-9f2a72beaa1c" />
 
 
-# PROJECT STRUCTURE
+## PROJECT STRUCTURE
 
                            .
                      ├── screenshots/               # Project images and proof of work
